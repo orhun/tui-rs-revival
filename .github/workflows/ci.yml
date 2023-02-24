@@ -57,6 +57,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: "Check conventional commits"
-        uses: orhun/committed@feat/action_input
+        uses: crate-ci/committed@master
         with:
+          args: "-vv"
           commits: "HEAD"
